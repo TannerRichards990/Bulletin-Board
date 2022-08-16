@@ -1,4 +1,3 @@
-export function renderPostDetail(Post) {
-  const postDetailEl = document.createElement
+import { renderPostDetail } from "../render-utils";
 
-}
+const postDetail

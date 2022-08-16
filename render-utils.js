@@ -41,3 +41,30 @@ export function renderPosts(posts) {
 
     return fragment;
 }
+
+export function renderPostDetail(post) {
+    const postContainerEl = document.createElement('div');
+    postContainerEl.classList.add('post-detail');
+
+    const categoryEl = document.createElement('h1');
+    categoryEl.classList.add('category');
+    categoryEl.textContent = `${post.category}`;
+
+    const titleEl = document.createElement('h2');
+    titleEl.classList.add('title');
+    titleEl.textContent = `${post.title}`;
+
+    const descriptionEl = document.createElement('p');
+    descriptionEl.classList.add('description');
+    descriptionEl.textContent = `${post.description}`;
+
+    const contactEl = document.createElement('p');
+    contactEl.classList.add('contact');
+    contactEl.textContent = `${post.contact}`;
+
+    const deleteButtonEl = document.createElement('button');
+    deleteButtonEl.classList.add('delete-button');
+
+    postContainerEl.append(categoryEl, titleEl, descriptionEl, contactEl, deleteButtonEl);
+
+}
