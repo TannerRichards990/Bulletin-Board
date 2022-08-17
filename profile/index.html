@@ -13,7 +13,7 @@
         href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;600&family=Titillium+Web:wght@200;400;600&display=swap">
     <link rel="stylesheet" href="/styles/reset.css" />
     <link rel="stylesheet" href="/styles/global.css" />
-    <link rel="stylesheet" href="/styles/bulletin-board.css" />
+    <link rel="stylesheet" href="/styles/profile.css" />
     <title>Add Post</title>
 </head>
 
@@ -24,37 +24,34 @@
         <nav>
             <a href="../">Bulletin</a>
             <a id="sign-out-link" href="auth">Sign out</a>
+            <a id="profile" href="auth">My Profile</a>
         </nav>
     </header>
 
     <main>
-        <form id="post-it-form">
-            <label>
-                <div>Category</div>
-                <select id="category-select" name="category_id" required>
-                    <option disabled selected value="">choose a category...</option>
-                </select>
-            </label>
+        <div id="user-profile">
+          <h1>User-Info:</h1>
+          <br>
+          <br>
+          <br>
+          <h2 class="user-name">Name:</h2>
+          <textarea>Tanner Richards</textarea>
+          <br>
+          <br>
+          <br>
+          <br>
+          <p class="user-bio">Bio:</p>  
+          <textarea>I am a full-stack software engineer, passionate about creating cool 
+            bulletin board apps that my friends can use. Check my profile out!
+          </textarea>
+          <br>
+          <br>
+          <br>
+          <button id="update-profile">Update My Profile</button>
+          
 
-            <label>
-                <div>Title</div>
-                <input name="title" required placeholder="my post is about...">
-            </label>
 
-            <label>
-                <div>Description</div>
-                <textarea name="description" required placeholder="more details..."></textarea>
-            </label>
-
-            <label>
-                <div>Contact</div>
-                <input name="contact" placeholder="how to get in touch..." />
-            </label>
-
-            <button>Add Post</button>
-
-            <p class="error"></p>
-        </form>
+        </div>
     </main>
 
     <footer>&copy;2022 Software Developer</footer>
