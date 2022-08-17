@@ -1,5 +1,5 @@
 import { renderPostDetail } from '../render-utils.js';
-import { checkAuth, deletePostById, getPostsById, getUser } from '../fetch-utils.js';
+import { checkAuth, deletePostById, getPostsById, } from '../fetch-utils.js';
 
 const postDetailEl = document.getElementById('post-detail');
 const user = checkAuth();
@@ -13,8 +13,10 @@ async function displayPostDetail() {
     if (user.id === post.user_id) {
         const buttonEl = document.createElement('button');
         buttonEl.textContent = 'delete';
-        buttonEl.addEventListener('click', () => {
-            deletePostById(post.id);
+        buttonEl.classList.add('post');
+        buttonEl.addEventListener('click', async () => {
+            await deletePostById(post.id);
+            location.replace(`../`);
             
         });
         postDetailEl.append(buttonEl);
