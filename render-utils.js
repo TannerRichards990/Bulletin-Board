@@ -46,9 +46,10 @@ export function renderPostDetail(post) {
     const postContainerEl = document.createElement('div');
     postContainerEl.classList.add('post-detail');
 
-    const categoryEl = document.createElement('h1');
-    categoryEl.classList.add('category');
-    categoryEl.textContent = `${post.category}`;
+    const categoriesEl = document.createElement('h1');
+    categoriesEl.classList.add('category');
+    categoriesEl.textContent = `${post.categories.name}`;
+    categoriesEl.textContent = `${post.categories.emoji}`;
 
     const titleEl = document.createElement('h2');
     titleEl.classList.add('title');
@@ -65,6 +66,8 @@ export function renderPostDetail(post) {
     const deleteButtonEl = document.createElement('button');
     deleteButtonEl.classList.add('delete-button');
 
-    postContainerEl.append(categoryEl, titleEl, descriptionEl, contactEl, deleteButtonEl);
+    postContainerEl.append(categoriesEl, titleEl, descriptionEl, contactEl, deleteButtonEl);
+
+    return postContainerEl;
 
 }
