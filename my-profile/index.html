@@ -24,14 +24,26 @@
         <nav>
             <a href="../">Bulletin</a>
             <a id="sign-out-link" href="auth">Sign out</a>
-            <a id="profile" href="auth">My Profile</a>
+          
         </nav>
     </header>
 
     <main>
-        <div id="user-profile">
-          <h1>User-Info:</h1>
-          <br>
+        <div id="profile-container">
+          <form id="profile-form">
+            <h1>User Info:<h1>
+            <label for="user-name">Enter Your Name:</label>
+            <input type="text" name="profile-name">
+            <br>
+            <br>
+            <label for="profile-bio">Bio:</label>
+            <textarea name="profile-bio" id="" cols="40" rows="20"></textarea>
+            <br>
+            <br>
+              <button name="update-btn">Update Profile</button>
+            <p class="error"></p>
+          </form>
+          <!-- <br>
           <br>
           <br>
           <h2 class="user-name">Name:</h2>
@@ -48,7 +60,7 @@
           <br>
           <br>
           <button id="update-profile">Update My Profile</button>
-          
+           -->
 
 
         </div>

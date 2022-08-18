@@ -1,4 +1,4 @@
-#user-profile {
+#profile-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -12,3 +12,16 @@
   color: greenyellow;
   font-size: 16px;
 }
+
+#profile-form{
+  background-color: black;
+  border: 2px solid greenyellow;
+}
+
+form button {
+  color: greenyellow;
+  background-color: black;
+  border: 1px solid greenyellow;
+  font-size: 16px;
+}
+
