@@ -11,7 +11,16 @@ Note that the comments feature will be added later this week to this page
 Sketch out what the page will look like. On your diagram, identify:
 
 -   What are the pieces of data required? (down to the field/column level)
+- Category
+- Title
+- Description
+- Comments
+- Contact info
+- Delete Post Button
 -   What actions take place on the page? (usually means DOM events + page load)
+- delete button eventListener for authenticated creator of post.
+- display function for user specific data
+- render function for specific post, allowing creator of post to delete the post
 
 Take a screen shot and include in your repo
 
