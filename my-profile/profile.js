@@ -1,6 +1,9 @@
-import { saveProfile } from '../fetch-utils.js';
+import { checkAuth, saveProfile, getProfile } from '../fetch-utils.js';
 
 const formEl = document.getElementById('profile-form');
+const profileNameInput = formEl.querySelector('[name=user-name]');
+const profileBioInput = formEl.querySelector('[name=user-bio]');
+const user = checkAuth();
 
 const userProfile = {
     name: '',
@@ -23,3 +26,23 @@ formEl.addEventListener('submit', async (e) => {
 
 });
 
+
+
+// async function displayProfile() {
+//     const response = await getProfile(user.id);
+//     const profile = response.data;
+//     if (profile) {
+//         profileNameInput.value = profile.name;
+//         profileBioInput.value = profile.bio;
+//     }
+// }
+
+async function displayProfile() {
+    const response = await getProfile(user.id);
+    if (response) {
+        profileNameInput.value = response.name;
+        profileBioInput.value = response.bio;
+    }
+}
+
+displayProfile();
