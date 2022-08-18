@@ -27,16 +27,6 @@ formEl.addEventListener('submit', async (e) => {
 });
 
 
-
-// async function displayProfile() {
-//     const response = await getProfile(user.id);
-//     const profile = response.data;
-//     if (profile) {
-//         profileNameInput.value = profile.name;
-//         profileBioInput.value = profile.bio;
-//     }
-// }
-
 async function displayProfile() {
     const response = await getProfile(user.id);
     if (response) {

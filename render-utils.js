@@ -72,6 +72,24 @@ export function renderPostDetail(post) {
 
 }
 
+export function renderProfile(user) {
+    const userContainerEl = document.createElement('div');
+    userContainerEl.classList.add('user-profiles');
+
+    const userNameEl = document.createElement('p');
+    userNameEl.classList.add('name');
+    userNameEl.textContent = `${user.name}`;
+
+    const userBioEl = document.createElement('p');
+    userBioEl.classList.add('bio');
+    userBioEl.textContent = `${user.bio}`;
+
+    userContainerEl.append(userNameEl, userBioEl);
+
+    return userContainerEl;
+
+
+}
 
 
 
