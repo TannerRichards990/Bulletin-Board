@@ -64,11 +64,7 @@ export async function deletePostById(id) {
     return checkError(response);
 }
 
-export async function getProfiles(id) {
-    return await client.from('profiles')
+export async function saveProfile(userProfile) {
+    return await client.from('whatever we name the table').upsert(userProfile);
+    
 }
-
-getProfile();
-
-saveProfiles();
-.upsert
