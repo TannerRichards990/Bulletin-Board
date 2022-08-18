@@ -63,3 +63,13 @@ export async function deletePostById(id) {
     const response = await client.from('posts').delete().match({ id });
     return checkError(response);
 }
+
+export async function saveProfile(userProfile) {
+    return await client.from('profiles').upsert(userProfile);
+    
+}
+
+export async function getProfile(id) {
+    const response = await client.from('profiles').select('*').match({ id }).single();
+    return response.data;
+}

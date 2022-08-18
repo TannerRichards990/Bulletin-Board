@@ -71,3 +71,8 @@ export function renderPostDetail(post) {
     return postContainerEl;
 
 }
+
+
+
+
+

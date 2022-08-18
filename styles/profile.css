@@ -1,0 +1,27 @@
+#profile-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 400px;
+  width: 400px;
+  margin: 100px;
+  margin-left: 350px;
+  border: 2px solid greenyellow;
+  background-color: black;
+  color: greenyellow;
+  font-size: 16px;
+}
+
+#profile-form{
+  background-color: black;
+  border: 2px solid greenyellow;
+}
+
+form button {
+  color: greenyellow;
+  background-color: black;
+  border: 1px solid greenyellow;
+  font-size: 16px;
+}
+
