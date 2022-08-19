@@ -1,4 +1,4 @@
-import { getProfiles } from '../fetch-utils.js';
+import { getProfiles, signOutUser, checkAuth } from '../fetch-utils.js';
 import { renderProfile } from '../render-utils.js';
 
 const profileContainer = document.getElementById('profile-container');
@@ -14,4 +14,7 @@ async function displayAllUsers() {
 
 displayAllUsers();
 
-
+const signOutLink = document.getElementById('sign-out-link');
+signOutLink.addEventListener('click', signOutUser);
+// make sure we have a user
+checkAuth();
